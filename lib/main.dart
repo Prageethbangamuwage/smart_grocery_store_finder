@@ -66,7 +66,7 @@ class _SplashState extends State<Splash> {
 }
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({super.key}); //home
 
   @override
   Widget build(BuildContext context) {
