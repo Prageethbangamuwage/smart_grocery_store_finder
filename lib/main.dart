@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/home_screen.dart';
+import 'package:smart_grocery_store_finder/intro_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,11 +72,13 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(14, 65, 249, 1),
-        title: const Text("create your shopping list"),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {
+        "/" : (context) => const IntroScreen(),
+         // ignore: prefer_const_constructors
+         "home" : (context) =>  HomeScreen(),
+      },
     );
   }
 }
