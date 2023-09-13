@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class Home extends StatelessWidget {
   const Home({super.key}); //home
 
@@ -31,14 +30,11 @@ class Home extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/" : (context) => const IntroScreen(),
-         // ignore: prefer_const_constructors
-         "home" : (context) =>  HomeScreen(),
-         "Fogot":(context) => FogotPage(),
+        "/": (context) => const IntroScreen(),
+        // ignore: prefer_const_constructors
+        "home": (context) => HomeScreen(),
+        "Fogot": (context) => FogotPage(),
       },
     );
   }
 }
-
-
-

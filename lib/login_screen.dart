@@ -5,7 +5,6 @@ import 'package:smart_grocery_store_finder/my_text_field.dart';
 import 'package:smart_grocery_store_finder/signup_screen.dart';
 import 'package:smart_grocery_store_finder/square_tile.dart';
 
-
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
@@ -16,8 +15,6 @@ class LoginPage extends StatelessWidget {
   // sign user in method
   void signUserIn() {}
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +24,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // logo
               const Icon(
@@ -35,7 +32,7 @@ class LoginPage extends StatelessWidget {
                 size: 100,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               // username textfield
               MyTextField(
                 controller: usernameController,
@@ -53,42 +50,43 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 10),
-              
 
               // forgot password?
-             Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.end,
-    children: [
-      GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => FogotPage()), // Replace 'ForgotPage' with your actual page widget.
-          );
-        },
-        child: Text(
-          'Forgot Password?',
-          style: TextStyle(
-            color: Colors.grey[600],
-            decoration: TextDecoration.underline, // Add underline style to mimic a link.
-          ),
-        ),
-      ),
-    ],
-  ),
-),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  FogotPage()), // Replace 'ForgotPage' with your actual page widget.
+                        );
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          decoration: TextDecoration
+                              .underline, // Add underline style to mimic a link.
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
-
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
 
               // sign in button
               MyButton(
                 onTap: signUserIn,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // or continue with
               Padding(
@@ -118,18 +116,18 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // google + apple sign in buttons
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   // google button
                   SquareTile(imagePath: 'assets/google.png'),
                 ],
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               // not a member? register now
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -140,10 +138,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   const SizedBox(width: 4),
                   MouseRegion(
-                  cursor: SystemMouseCursors.click,
-          
+                    cursor: SystemMouseCursors.click,
                     child: GestureDetector(
-                      
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
