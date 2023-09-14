@@ -28,7 +28,7 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               // username textfield
               MyTextField(
                 controller: usernameController,
@@ -47,7 +47,7 @@ class _SignUpState extends State<SignUp> {
 
               const SizedBox(height: 10),
 
-             MyTextField(
+              MyTextField(
                 controller: usernameController,
                 hintText: 'Password',
                 obscureText: false,
@@ -92,7 +92,7 @@ class _SignUpState extends State<SignUp> {
                 child: const Text('Sign Up'),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // or continue with
               Padding(
@@ -122,7 +122,7 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // google + apple sign in buttons
               Row(
@@ -133,7 +133,7 @@ class _SignUpState extends State<SignUp> {
                 ],
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
 
               // not a member? register now
               Row(
