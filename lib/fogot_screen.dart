@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/otp_screen.dart';
 
 class FogotPage extends StatelessWidget {
   FogotPage({Key? key}) : super(key: key);
@@ -77,8 +78,12 @@ class FogotPage extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 20.0), // Optional margin
                 child: ElevatedButton(
                   onPressed: () {
-                    // Add your logic here for what happens when the button is pressed
-                    // For example, you can navigate to the next screen or perform an action
+                    // Navigate to the OtpPage when the button is pressed
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const OtpPage(),
+                      ),
+                    );
                   },
                   child: const Text(
                     "Continue",
