@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/login_screen.dart';
-import 'button.dart';
 
 class HomeScreen extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
