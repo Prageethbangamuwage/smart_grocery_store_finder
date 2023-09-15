@@ -19,10 +19,10 @@ class FogotPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               // Icon and Text
-              Align(
+              const Align(
                 alignment: Alignment.topCenter, // Aligns the content to the top center
                 child: Column(
-                  children: const [
+                  children: [
                     Icon(
                       Icons.lock,
                       size: 100,
