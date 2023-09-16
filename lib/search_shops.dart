@@ -40,7 +40,7 @@ class SearchShops extends StatelessWidget {
               left: -7,
               child: Container(
                 width: 421,
-                height: 161,
+             height: 161,
                 decoration: const BoxDecoration(
                   color: Color.fromRGBO(31, 154, 222, 1),
                   borderRadius: BorderRadius.all(Radius.elliptical(421, 161)),
