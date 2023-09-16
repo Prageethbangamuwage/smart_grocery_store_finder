@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/login_screen.dart';
+import 'package:smart_grocery_store_finder/seller_first_page.dart';
 
 class HomeScreen extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
@@ -29,7 +30,12 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: buttonPrimary,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const Seller1Widget(); // Replace with the screen you want to navigate to.
+                    }));
+                  },
                   child: const Text('Seller'),
                 ),
                 const SizedBox(
