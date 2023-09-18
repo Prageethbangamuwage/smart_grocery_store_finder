@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_grocery_store_finder/seller_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,19 +17,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SellerSignup(),
+      home: const SellerProfile(),
     );
   }
 }
 
-class SellerSignup extends StatefulWidget {
-  const SellerSignup({super.key,});
+class SellerProfile extends StatefulWidget {
+  const SellerProfile({super.key,});
 
   @override
-  State<SellerSignup> createState() => _SellerSignupState();
+  State<SellerProfile> createState() => _SellerProfileState();
 }
 
-class _SellerSignupState extends State<SellerSignup> {
+class _SellerProfileState extends State<SellerProfile> {
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +37,11 @@ class _SellerSignupState extends State<SellerSignup> {
    return Scaffold(
     body: Container(
       width: 411,
-          height: 823,
+          height: 1000,
           decoration: const BoxDecoration(
             color : Color.fromRGBO(255, 255, 255, 1),
           ),
+        
           child: Stack(
             children: <Widget>[
             Positioned(
@@ -98,7 +98,7 @@ class _SellerSignupState extends State<SellerSignup> {
               top: 98,
               left: 160,
               child: Text(
-                'SignUp', textAlign: TextAlign.center, style: TextStyle(
+                'Profile', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Outfit',
                 fontSize: 30,
@@ -108,104 +108,136 @@ class _SellerSignupState extends State<SellerSignup> {
                 decoration: TextDecoration.none,
               ),)
             ),
+            Positioned(
+              top: 169,
+              left: 155,
+              child: Container(
+                width: 100,
+                height: 100,
+                alignment: Alignment.centerLeft,
+                decoration: const BoxDecoration(
+                  image : DecorationImage(
+                    image: AssetImage('assets/edit_profile.png'),
+                    fit: BoxFit.fitWidth
+                  ),
+                )
+              )
+            ),
             
             const Positioned(
-              top: 192,
-              left: 45,
+              top: 284,
+              left: 30,
               child: SizedBox(
-                width: 320,
+                width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Full Name',
-                    labelText: 'Full Name',
+                    hintText: 'Shop name',
+                    //labelText: '',
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
             ),
             const Positioned(
-              top: 267,
-              left: 45,
+              top: 360,
+              left: 30,
               child: SizedBox(
-                width: 320,
+                width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Email',
-                    labelText: 'Email',
+                    hintText: 'Business registration number',
+                    //labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
             ),
             const Positioned(
-              top: 342,
-              left: 45,
+              top: 436,
+              left: 30,
               child: SizedBox(
-                width: 320,
+                width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Password',
-                    labelText: 'Password',
+                    hintText: 'Address',
+                    //labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
             ),
             const Positioned(
-              top: 417,
-              left: 45,
+              top: 512,
+              left: 30,
               child: SizedBox(
-                width: 320,
+                width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Confirm Password',
-                    labelText: 'Confirm Password',
+                    hintText: 'Contact info',
+                    //labelText: 'Confirm Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
             ),
-            Positioned(
-              top: 367,
-              left: 322,
-              child: Container(
-                width: 22,
-                height: 11.61,
-                alignment: Alignment.centerLeft,
-                decoration: const BoxDecoration(
-                  image : DecorationImage(
-                    image: AssetImage('assets/eye1.png'),
-                    fit: BoxFit.fitWidth
+            const Positioned(
+              top: 588,
+              left: 30,
+              child: SizedBox(
+                width: 347,
+                height: 64,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Opening hours',
+                    //labelText: 'Confirm Password',
+                    border: OutlineInputBorder(),
                   ),
-                )
-              )
-            ),
-            Positioned(
-              top: 446,
-              left: 322,
-              child: Container(
-                width: 22,
-                height: 11.61,
-                alignment: Alignment.centerLeft,
-                decoration: const BoxDecoration(
-                  image : DecorationImage(
-                    image: AssetImage('assets/eye1.png'),
-                    fit: BoxFit.fitWidth
-                  ),
-                )
-              )
+                ),
+              ),
             ),
             const Positioned(
-              top: 501,
-              left: 95,
-              child: Text('I accept the terms and conditions', textAlign: TextAlign.center, style: TextStyle(
+              top: 664,
+              left: 30,
+              child: SizedBox(
+                width: 347,
+                height: 64,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Ratings/ Reviews',
+                    //labelText: 'Confirm Password',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 740,
+              left: 30,
+              child: SizedBox(
+                width: 347,
+                height: 64,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Description',
+                    //labelText: 'Confirm Password',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ),
+            
+            
+            const Positioned(
+              top: 852,
+              left: 329,
+              child: Text('0/1000', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Outfit',
-                fontSize: 12,
+                fontSize: 15,
                 letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                 fontWeight: FontWeight.normal,
                 height: 1.3888888888888888,
@@ -214,8 +246,8 @@ class _SellerSignupState extends State<SellerSignup> {
             ),
              
            Positioned(
-              top: 545,
-              left: 33,
+              top: 906,
+              left: 36,
               child: Center(
                 child:SizedBox(
                   width: 344,
@@ -228,12 +260,8 @@ class _SellerSignupState extends State<SellerSignup> {
                       ),
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return const SellerProfile(); // Replace with the screen you want to navigate to.
-                    }));
-                  }, 
-                  child: const Text('SIGNUP', style: TextStyle(
+                  onPressed: () {}, 
+                  child: const Text('Update', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
                 ),
@@ -243,60 +271,10 @@ class _SellerSignupState extends State<SellerSignup> {
               ),
               
             ),
-            const Positioned(
-              top: 600,
-              left: 155,
-              child: Text('or SignUp with', textAlign: TextAlign.center, style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Outfit',
-                fontSize: 16,
-                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1.3888888888888888,
-                decoration: TextDecoration.none,
-              ),)
-            ),
-            Positioned(
-              top: 640,
-              left: 179,
-              child: Container(
-                width: 50,
-                height: 50,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  image : DecorationImage(
-                    image: AssetImage('assets/google.png'),
-                    fit: BoxFit.fitWidth
-                  ),
-                )
-              )
-            ),
-            const Positioned(
-              top: 700,
-              left: 118,
-              child: Text('Already have an account?', textAlign: TextAlign.center, style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 1),
-                fontFamily: 'Outfit',
-                fontSize: 16,
-                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1.3888888888888888,
-                decoration: TextDecoration.none,
-              ),)
-            ),
-            const Positioned(
-              top: 725,
-              left: 182,
-              child: Text('Login', textAlign: TextAlign.center, style: TextStyle(
-                color: Colors.red,
-                fontFamily: 'Outfit',
-                fontSize: 16,
-                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1.3888888888888888,
-                decoration: TextDecoration.none,
-              ),)
-            ),
+            
+            
+            
+            
             
             
         ]
