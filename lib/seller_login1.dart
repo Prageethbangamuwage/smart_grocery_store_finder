@@ -169,6 +169,14 @@ class _SellerLoginState extends State<SellerLogin> {
               )
             ),
             const Positioned(
+                top: 451,
+                left: 45,
+                child: Icon(
+                  Icons.check_box_outlined,
+                  size: 24,
+                ),
+              ),
+            const Positioned(
               top: 457,
               left: 71,
               child: Text('Remeber Me', textAlign: TextAlign.center, style: TextStyle(
@@ -269,6 +277,7 @@ class _SellerLoginState extends State<SellerLogin> {
             const Positioned(
               top: 725,
               left: 145,
+              
               child: Text('Create Account', textAlign: TextAlign.center, style: TextStyle(
                 color: Colors.red,
                 fontFamily: 'Outfit',

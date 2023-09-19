@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/add_item.dart';
+import 'package:smart_grocery_store_finder/delete_item.dart';
+import 'package:smart_grocery_store_finder/update_item.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +40,7 @@ class _SellerHomeState extends State<SellerHome> {
    return Scaffold(
     body: Container(
       width: 411,
-          height: 1000,
+          height: 823,
           decoration: const BoxDecoration(
             color : Color.fromRGBO(255, 255, 255, 1),
           ),
@@ -120,9 +123,13 @@ class _SellerHomeState extends State<SellerHome> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
+                  onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const AddItem(); // Replace with the screen you want to navigate to.
+                    }));
+                  }, 
                   child: const Center(
-                    child: Text('Add \nItem', style: TextStyle(
+                    child: Text(textAlign: TextAlign.center,'Add \nItem', style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'outfit',
                     color: Color.fromRGBO(0, 0, 0, 1),
@@ -133,8 +140,7 @@ class _SellerHomeState extends State<SellerHome> {
               ),
                   )
                   ,
-                  
-
+               
             ),
             Positioned(
               top: 235,
@@ -152,9 +158,13 @@ class _SellerHomeState extends State<SellerHome> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const UpdateItem(); // Replace with the screen you want to navigate to.
+                    }));
+                  }, 
                   child: const Center(
-                    child: Text('Update \nItem', style: TextStyle(
+                    child: Text(textAlign: TextAlign.center,'Update \nItem', style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'outfit',
                     color: Color.fromRGBO(0, 0, 0, 1),
@@ -164,8 +174,7 @@ class _SellerHomeState extends State<SellerHome> {
                 ),
               ),
                   ),
-                  
-
+                 
             ),
             Positioned(
               top: 454,
@@ -183,9 +192,13 @@ class _SellerHomeState extends State<SellerHome> {
                       ),
                     ),
                   ),
-                  onPressed: () {},
-                  child: const Center(
-                    child: Text('Delete \nItem', style: TextStyle(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const DeleteItem(); // Replace with the screen you want to navigate to.
+                    }));
+                  },
+                  
+                    child: const Text(textAlign: TextAlign.center,'Delete \nItem', style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'outfit',
                     color: Color.fromRGBO(0, 0, 0, 1),
@@ -194,9 +207,8 @@ class _SellerHomeState extends State<SellerHome> {
                 )
                 ),
               ),
-                  ), 
                   
-
+             
             ),
             Positioned(
               top: 454,
@@ -215,8 +227,8 @@ class _SellerHomeState extends State<SellerHome> {
                     ),
                   ),
                   onPressed: () {},
-                  child: const Center(
-                    child: Text('View \nItem', style: TextStyle(
+                  
+                    child: const Text(textAlign: TextAlign.center,'View \nItem', style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'outfit',
                     color: Color.fromRGBO(0, 0, 0, 1),
@@ -226,10 +238,8 @@ class _SellerHomeState extends State<SellerHome> {
                 ),
               ),
                   ), 
-                  
-
-            ),
-
+                
+            
 
         ]
       )
