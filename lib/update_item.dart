@@ -103,8 +103,8 @@ class _UpdateItemState extends State<UpdateItem> {
                 ),
               ),
             const Positioned(
-              top: 98,
-              left: 160,
+              top: 105,
+              left: 125,
               child: Text(
                 'Update Item', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
@@ -256,7 +256,7 @@ class _UpdateItemState extends State<UpdateItem> {
                   onPressed: () {
                     
                   }, 
-                  child: const Text('Update Item', style: TextStyle(
+                  child: const Text('Update', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
                 ),

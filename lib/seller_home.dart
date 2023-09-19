@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/add_item.dart';
 import 'package:smart_grocery_store_finder/delete_item.dart';
 import 'package:smart_grocery_store_finder/update_item.dart';
+import 'package:smart_grocery_store_finder/view_item.dart';
 
 void main() {
   runApp(const MyApp());
@@ -226,7 +227,11 @@ class _SellerHomeState extends State<SellerHome> {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const ViewItem(); // Replace with the screen you want to navigate to.
+                    }));
+                  },
                   
                     child: const Text(textAlign: TextAlign.center,'View \nItem', style: TextStyle(
                     fontSize: 25,
