@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:smart_grocery_store_finder/button.dart';
 import 'package:smart_grocery_store_finder/fogot_screen.dart';
 import 'package:smart_grocery_store_finder/my_text_field.dart';
+import 'package:smart_grocery_store_finder/search_shops.dart';
 import 'package:smart_grocery_store_finder/signup_screen.dart';
 import 'package:smart_grocery_store_finder/square_tile.dart';
 
@@ -82,9 +84,29 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               // sign in button
-              MyButton(
-                onTap: signUserIn,
-              ),
+             Container(
+                 decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(8),
+        ),
+                width: double.infinity, // Make the button span the entire width
+                height: 50.0, // Set the desired height of the button
+                margin: const EdgeInsets.symmetric(horizontal: 20.0), // Optional margin
+                child: ElevatedButton(
+                               onPressed: () {
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return const SearchShops(); // Replace with the screen you want to navigate to.
+  }));
+},
+                  child: const Text(
+                    "LOGIN",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                  ),
+
+                ),
+               ),
+               ),
 
               const SizedBox(height: 30),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/shops.dart';
 
 class SearchShops extends StatelessWidget {
   const SearchShops({Key? key}) : super(key: key);
@@ -72,7 +73,9 @@ class SearchShops extends StatelessWidget {
                     height: 40, // Set the desired height
                     child: ElevatedButton(
                       onPressed: () {
-                        // Add your button's functionality here
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return const Shops(); // Replace with the screen you want to navigate to.
+  }));// Add your button's functionality here
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
