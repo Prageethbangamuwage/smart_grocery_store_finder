@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/seller_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -168,6 +169,14 @@ class _SellerLoginState extends State<SellerLogin> {
               )
             ),
             const Positioned(
+                top: 451,
+                left: 45,
+                child: Icon(
+                  Icons.check_box_outlined,
+                  size: 24,
+                ),
+              ),
+            const Positioned(
               top: 457,
               left: 71,
               child: Text('Remeber Me', textAlign: TextAlign.center, style: TextStyle(
@@ -209,7 +218,11 @@ class _SellerLoginState extends State<SellerLogin> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const SellerHome(); // Replace with the screen you want to navigate to.
+                    }));
+                  }, 
                   child: const Text('LOGIN', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
@@ -264,6 +277,7 @@ class _SellerLoginState extends State<SellerLogin> {
             const Positioned(
               top: 725,
               left: 145,
+              
               child: Text('Create Account', textAlign: TextAlign.center, style: TextStyle(
                 color: Colors.red,
                 fontFamily: 'Outfit',
