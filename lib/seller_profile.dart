@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -33,7 +33,7 @@ class _SellerProfileState extends State<SellerProfile> {
 
   @override
   Widget build(BuildContext context) {
-    
+
    return Scaffold(
     body: Container(
       width: 411,
@@ -41,7 +41,7 @@ class _SellerProfileState extends State<SellerProfile> {
           decoration: const BoxDecoration(
             color : Color.fromRGBO(255, 255, 255, 1),
           ),
-        
+
           child: Stack(
             children: <Widget>[
             Positioned(
@@ -95,6 +95,14 @@ class _SellerProfileState extends State<SellerProfile> {
               )
             ),
             const Positioned(
+                top: 24,
+                left: 15,
+                child: Icon(
+                  Icons.menu,
+                  size: 24,
+                ),
+              ),
+            const Positioned(
               top: 98,
               left: 160,
               child: Text(
@@ -123,7 +131,7 @@ class _SellerProfileState extends State<SellerProfile> {
                 )
               )
             ),
-            
+
             const Positioned(
               top: 284,
               left: 30,
@@ -229,8 +237,8 @@ class _SellerProfileState extends State<SellerProfile> {
                 ),
               ),
             ),
-            
-            
+
+
             const Positioned(
               top: 852,
               left: 329,
@@ -244,7 +252,7 @@ class _SellerProfileState extends State<SellerProfile> {
                 decoration: TextDecoration.none,
               ),)
             ),
-             
+
            Positioned(
               top: 906,
               left: 36,
@@ -269,18 +277,13 @@ class _SellerProfileState extends State<SellerProfile> {
                 )
                 ),
               ),
-              
+
             ),
-            
-            
-            
-            
-            
-            
+
         ]
       )
     ),
-      
+
    );
   }
 }

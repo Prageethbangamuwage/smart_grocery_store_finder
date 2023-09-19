@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/seller_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -209,7 +210,11 @@ class _SellerLoginState extends State<SellerLogin> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const SellerHome(); // Replace with the screen you want to navigate to.
+                    }));
+                  }, 
                   child: const Text('LOGIN', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
