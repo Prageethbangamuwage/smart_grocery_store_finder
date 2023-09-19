@@ -92,7 +92,7 @@ class SelectShop extends StatelessWidget {
                   Text(
                     'Keels',
                     style: TextStyle(
-                      fontSize: 21,
+                      fontSize: 20,
                       color: Colors.black,
                     ),
                   ),
