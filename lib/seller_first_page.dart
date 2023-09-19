@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:smart_grocery_store_finder/seller_login1.dart';
+import 'package:smart_grocery_store_finder/seller_signup.dart';
 
 
 
@@ -104,8 +105,9 @@ class Seller1Widget extends StatefulWidget {
                 fontFamily: 'Outfit',
                 fontSize: 30,
                 letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 0.6666666666666666
+                fontWeight: FontWeight.bold,
+                height: 0.6666666666666666,
+                decoration: TextDecoration.none,
               ),)
             ),
             Positioned(
@@ -126,28 +128,72 @@ class Seller1Widget extends StatefulWidget {
               top: 189,
               left: 29,
               child: Text('Thousands of BUYMART users  are waiting to \nbuy your products', textAlign: TextAlign.center, style: TextStyle(
-                color: Color.fromRGBO(151, 151, 151, 1),
+                color: Color(0xFF414040),
                 fontFamily: 'Outfit',
                 fontSize: 18,
                 letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                 fontWeight: FontWeight.normal,
-                height: 1.3888888888888888
+                height: 1.3888888888888888,
+                decoration: TextDecoration.none,
               ),)
             ),
             
             Positioned(
-              top: 599,
+              top: 581,
               left: 33,
-              child: ElevatedButton(
-                onPressed: () {}, 
-                child: const Text('Login', style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'outfit',
+              child: Center(
+                child:SizedBox(
+                  width: 344,
+                  height: 44,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0), // Adjust the radius here
+                      ),
+                    ),
+                  ),
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const SellerLogin(); // Replace with the screen you want to navigate to.
+                    }));}, 
+                  child: const Text('LOGIN', style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'outfit',
                 ),
                 ),
-                
+                )
+                ),
+              ),
               
-              )
+            ),
+            Positioned(
+              top: 660,
+              left: 33,
+              child: Center(
+                child:SizedBox(
+                  width: 344,
+                  height: 44,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0), // Adjust the radius here
+                      ),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const SellerSignup(); // Replace with the screen you want to navigate to.
+                    }));
+                  }, 
+                  child: const Text('SIGNUP', style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'outfit',
+                ),
+                ),
+                )
+                ),
+              ),
               
             ),
             /*Container(
