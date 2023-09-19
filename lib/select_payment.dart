@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/keels.dart';
 
-class Shops extends StatelessWidget {
-  const Shops({Key? key}) : super(key: key);
+class SelectShop extends StatelessWidget {
+  const SelectShop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,63 +77,15 @@ class Shops extends StatelessWidget {
                 ),
               ),
             ),
-            // Search Bar below Text and White Color Button
-            Positioned(
-              top: 180, // Adjust the top position as needed
-              left: 16,
-              right: 16,
-              child: Column(
-                children: [
                   Container(
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12),
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        const Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.mic,
-                            color: Colors.grey,
-                          ),
-                          onPressed: () {
-                            // Add functionality for voice recognition here
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                      height:
-                          60), // Add spacing between the search bar and button
-                  Container(
-                    height: 40,
+                    height: 70,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: TextButton(
-                      onPressed: () {
-                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return const keels(); // Replace with the screen you want to navigate to.
-  })); // Add functionality for the button here
-                      },
+                      onPressed: () {},// Add functionality for the button here},
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -194,50 +146,10 @@ class Shops extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                      height:
-                          20), // Add spacing between the search bar and button
-                  Container(
-                    height: 40,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: TextButton(
-                      onPressed: () {
-                        // Add functionality for the button here
-                      },
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(width: 16), // Add space before "Keels"
-                          Text(
-                            'Cargills',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
-                          ),
-                          Spacer(), // Add space between "Keels" and "7Km"
-                          Text(
-                            '7 km',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
-                          ),
-                          SizedBox(width: 16), // Add space after "7Km"
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ]
         ),
       ),
     );
   }
 }
+          

@@ -4,6 +4,7 @@ import 'package:smart_grocery_store_finder/home_screen.dart';
 import 'package:smart_grocery_store_finder/intro_screen.dart';
 import 'package:smart_grocery_store_finder/splashscreen.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
