@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_grocery_store_finder/seller_profile.dart';
+import 'package:smart_grocery_store_finder/seller_login1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -199,6 +199,14 @@ class _SellerSignupState extends State<SellerSignup> {
                 )
               )
             ),
+             const Positioned(
+                top: 496,
+                left: 54,
+                child: Icon(
+                  Icons.check_box_outlined,
+                  size: 24,
+                ),
+              ),
             const Positioned(
               top: 501,
               left: 95,
@@ -230,7 +238,7 @@ class _SellerSignupState extends State<SellerSignup> {
                   ),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return const SellerProfile(); // Replace with the screen you want to navigate to.
+                      return const SellerLogin(); // Replace with the screen you want to navigate to.
                     }));
                   }, 
                   child: const Text('SIGNUP', style: TextStyle(
@@ -297,6 +305,7 @@ class _SellerSignupState extends State<SellerSignup> {
                 decoration: TextDecoration.none,
               ),)
             ),
+            
             
             
         ]

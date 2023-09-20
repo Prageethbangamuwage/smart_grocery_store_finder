@@ -17,19 +17,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SellerProfile(),
+      home: const UpdateItem(),
     );
   }
 }
 
-class SellerProfile extends StatefulWidget {
-  const SellerProfile({super.key,});
+class UpdateItem extends StatefulWidget {
+  const UpdateItem({super.key,});
 
   @override
-  State<SellerProfile> createState() => _SellerProfileState();
+  State<UpdateItem> createState() => _UpdateItemState();
 }
 
-class _SellerProfileState extends State<SellerProfile> {
+class _UpdateItemState extends State<UpdateItem> {
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _SellerProfileState extends State<SellerProfile> {
    return Scaffold(
     body: Container(
       width: 411,
-          height: 1000,
+          height: 823,
           decoration: const BoxDecoration(
             color : Color.fromRGBO(255, 255, 255, 1),
           ),
@@ -106,7 +106,7 @@ class _SellerProfileState extends State<SellerProfile> {
               top: 98,
               left: 160,
               child: Text(
-                'Profile', textAlign: TextAlign.center, style: TextStyle(
+                'Update Item', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Outfit',
                 fontSize: 30,
@@ -119,14 +119,14 @@ class _SellerProfileState extends State<SellerProfile> {
             
 
             const Positioned(
-              top: 171,
+              top: 175,
               left: 32,
               child: SizedBox(
                 width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Shop name',
+                    hintText: 'Item name',
                     //labelText: '',
                     border: OutlineInputBorder(),
                   ),
@@ -134,14 +134,14 @@ class _SellerProfileState extends State<SellerProfile> {
               ),
             ),
             const Positioned(
-              top: 247,
+              top: 251,
               left: 32,
               child: SizedBox(
                 width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Business registration number',
+                    hintText: 'Item code',
                     //labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
@@ -149,14 +149,14 @@ class _SellerProfileState extends State<SellerProfile> {
               ),
             ),
             const Positioned(
-              top: 323,
+              top: 327,
               left: 32,
               child: SizedBox(
                 width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Address',
+                    hintText: 'Price',
                     //labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
@@ -164,14 +164,14 @@ class _SellerProfileState extends State<SellerProfile> {
               ),
             ),
             const Positioned(
-              top: 399,
+              top: 403,
               left: 32,
               child: SizedBox(
                 width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Contact info',
+                    hintText: 'Expiration date',
                     //labelText: 'Confirm Password',
                     border: OutlineInputBorder(),
                   ),
@@ -179,56 +179,26 @@ class _SellerProfileState extends State<SellerProfile> {
               ),
             ),
             const Positioned(
-              top: 475,
+              top: 479,
               left: 32,
               child: SizedBox(
                 width: 347,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Opening hours',
+                    hintText: 'Quantity',
                     //labelText: 'Confirm Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
             ),
+          
+            
             const Positioned(
-              top: 551,
-              left: 32,
-              child: SizedBox(
-                width: 347,
-                height: 64,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Ratings/ Reviews',
-                    //labelText: 'Confirm Password',
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-            ),
-            const Positioned(
-              top: 627,
-              left: 32,
-              child: SizedBox(
-                width: 347,
-                height: 85,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Description',
-                    //labelText: 'Confirm Password',
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-            ),
-
-
-            const Positioned(
-              top: 685,
-              left: 322,
-              child: Text('0/1000', textAlign: TextAlign.center, style: TextStyle(
+              top: 579,
+              left: 51,
+              child: Text('Availabe', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
                 fontFamily: 'Outfit',
                 fontSize: 15,
@@ -238,10 +208,39 @@ class _SellerProfileState extends State<SellerProfile> {
                 decoration: TextDecoration.none,
               ),)
             ),
+            const Positioned(
+                top: 579,
+                left: 143,
+                child: Icon(
+                  Icons.radio_button_checked,
+                  size: 24,
+                ),
+              ),
+            const Positioned(
+              top: 579,
+              left: 222,
+              child: Text('Not availabe', textAlign: TextAlign.center, style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+                fontFamily: 'Outfit',
+                fontSize: 15,
+                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+                fontWeight: FontWeight.normal,
+                height: 1.3888888888888888,
+                decoration: TextDecoration.none,
+              ),)
+            ),
+            const Positioned(
+                top: 579,
+                left: 347,
+                child: Icon(
+                  Icons.radio_button_unchecked,
+                  size: 24,
+                ),
+              ),
 
            Positioned(
-              top: 720,
-              left: 36,
+              top: 662,
+              left: 33,
               child: Center(
                 child:SizedBox(
                   width: 344,
@@ -254,8 +253,10 @@ class _SellerProfileState extends State<SellerProfile> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
-                  child: const Text('Update', style: TextStyle(
+                  onPressed: () {
+                    
+                  }, 
+                  child: const Text('Update Item', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
                 ),

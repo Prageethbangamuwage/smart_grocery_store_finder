@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/cashondelivery.dart';
 
 class SelectPayment extends StatelessWidget {
   const SelectPayment({super.key,});
@@ -13,14 +14,15 @@ class SelectPayment extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            // Add spacing between the search bar and button
+            const SizedBox(height: 200),// Add spacing between the search bar and button
             Container(
-              height: 40,
+              height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey,
                 borderRadius: BorderRadius.circular(20),
               ),
+
               child: TextButton(
                 onPressed: () {},
                 child: Row(
@@ -32,7 +34,7 @@ class SelectPayment extends StatelessWidget {
                       width: 32, // Adjust the width as needed
                       height: 32, // Adjust the height as needed
                     ),
-                    const Spacer(), // Add space between image and "5 km"
+                    const SizedBox(width: 8), // Add space between image and "5 km"
                     const Text(
                       'Credit/Debit card',
                       style: TextStyle(
@@ -43,37 +45,40 @@ class SelectPayment extends StatelessWidget {
                     const Spacer(),
                     Image.asset(
                       'assets/creditcard2.png', // Replace with the path to your image asset
-                      width: 32, // Adjust the width as needed
-                      height: 32, // Adjust the height as needed
+                      width: 50, // Adjust the width as needed
+                      height: 50, // Adjust the height as needed
                     ),
 
-                    const SizedBox(width: 16), // Add space after "5 km"
+                    const SizedBox(width: 20), // Add space after "5 km"
                   ],
                 ),
               ),
             ),
             const SizedBox(height: 20), // Add spacing between buttons
             Container(
-              height: 40,
+              height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: TextButton(
                 onPressed: () {
-                  // Add functionality for the second button here
+                 Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const CashOnDelivery(); // Replace with the screen you want to navigate to.
+                    })); // Add functionality for the second button here
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const SizedBox(width: 16), // Add space before image
+                    const SizedBox(width: 16),
                     Image.asset(
                       'assets/cash.png', // Replace with the path to your image asset
                       width: 32, // Adjust the width as needed
                       height: 32, // Adjust the height as needed
                     ),
-                    const Spacer(), // Add space between image and "10 km"
+                    const Spacer(),// Add space between image and "10 km"
                     const Text(
                       'Cash on delivery',
                       style: TextStyle(
@@ -81,7 +86,7 @@ class SelectPayment extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    const SizedBox(width: 16), // Add space after "10 km"
+                    const SizedBox(width: 285), // Add space after "10 km"
                   ],
                 ),
               ),
