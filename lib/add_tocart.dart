@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_grocery_store_finder/Cart.dart';
+import 'package:smart_grocery_store_finder/cart.dart';
 
 class Items extends StatelessWidget {
   const Items({Key? key}) : super(key: key);

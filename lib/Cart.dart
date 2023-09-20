@@ -253,7 +253,7 @@ class _EditListState extends State<EditList> {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const VisitnCollect(); // Replace with the screen you want to navigate to.
+                    return const SelectOption(); // Replace with the screen you want to navigate to.
                   }));
                   // Handle the checkout button press
                 },

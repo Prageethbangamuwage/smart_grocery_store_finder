@@ -2,27 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/select_payment.dart';
 import 'package:smart_grocery_store_finder/thankyuo.dart';
 
-class VisitnCollect extends StatefulWidget {
-  const VisitnCollect({Key? key}) : super(key: key);
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _VisitnCollectState createState() => _VisitnCollectState();
-}
-
-class _VisitnCollectState extends State<VisitnCollect> {
-  int selectedRadio = 1; // Initialize the selected radio with the first option
-
-  setSelectedRadio(int val) {
-    setState(() {
-      selectedRadio = val;
-    });
-  }
+class SelectOption extends StatelessWidget {
+  const SelectOption({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const double appBarHeight = 50.0; // Adjust the app bar height as needed
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -49,84 +33,61 @@ class _VisitnCollectState extends State<VisitnCollect> {
               color: Colors.black, // Set text color to black
             ),
           ),
-          centerTitle: true, // Center-align the title
+          centerTitle: true,
         ),
         body: Column(
           children: [
-            const SizedBox(
-                height: appBarHeight), // Adjust the app bar height as needed
-            const SizedBox(height: 100), // Adjust the desired gap height
+            const SizedBox(height: 170), // Add space between AppBar and buttons
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Add functionality for the button here
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ThankYou(); // Replace with the screen you want to navigate to.
+                  }));
+                  // Add functionality for 'Visit & Collect' button here
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(
-                      255, 255, 255, 255), // Set the button background color
-                  minimumSize: const Size(500,
-                      200), // Set the width and height of the button as desired
+                style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(
+                      const Size(250, 40)), // Set button size
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(30.0), // Set button radius
+                    ),
+                  ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setSelectedRadio(1);
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const ThankYou(),
-                          ),
-                        );
-                      },
-                      child: Row(
-                        children: [
-                          Radio(
-                            value: 1,
-                            groupValue: selectedRadio,
-                            onChanged: (value) {
-                              setSelectedRadio(value as int);
-                            },
-                          ),
-                          const Text(
-                            'Visit & Collect',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
+                child: const Text(
+                  'Visit & Collect', // Text for the button
+                  style: TextStyle(
+                    fontSize: 18, // Change the font size here
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20), // Add space between buttons
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const SelectPayment(); // Replace with the screen you want to navigate to.
+                  }));
+                  // Add functionality for 'Doorstep Delivery' button here
+                },
+                style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(
+                      const Size(250, 40)), // Set button size
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(30.0), // Set button radius
                     ),
-                    GestureDetector(
-                      onTap: () {
-                         setSelectedRadio(1);
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const SelectPayment(),
-                          ),
-                        );
-                      },
-                      child: Row(
-                        children: [
-                          Radio(
-                            value: 2,
-                            groupValue: selectedRadio,
-                            onChanged: (value) {
-                              setSelectedRadio(value as int);
-                            },
-                          ),
-                          const Text(
-                            'Doorstep delivery',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
+                ),
+                child: const Text(
+                  'Doorstep Delivery', // Text for the button
+                  style: TextStyle(
+                    fontSize: 18, // Change the font size here
+                  ),
                 ),
               ),
             ),
