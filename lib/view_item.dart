@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class DeleteItem extends StatelessWidget {
-  const DeleteItem({Key? key}) : super(key: key);
+class ViewItem extends StatelessWidget {
+  const ViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class DeleteItem extends StatelessWidget {
               right: 0,
               child: Center(
                 child: Text(
-                  'Delete Item',
+                  'View Item',
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -111,8 +111,8 @@ class DeleteItem extends StatelessWidget {
                       ],
                     ),
                   ),
-                   Positioned(
-              top:200,
+            Positioned(
+              top:240,
               left:33, 
               child: Container(
                 width: 344,
@@ -152,7 +152,7 @@ class DeleteItem extends StatelessWidget {
                           ), // Adjust the radius as needed
                         ),
                       ),
-                      child: const Text('Delete', style: TextStyle(
+                      child: const Text('View', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',),
                       ),

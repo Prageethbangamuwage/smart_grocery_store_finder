@@ -103,8 +103,8 @@ class _AddItemState extends State<AddItem> {
                 ),
               ),
             const Positioned(
-              top: 98,
-              left: 160,
+              top: 105,
+              left: 140,
               child: Text(
                 'Add Item', textAlign: TextAlign.center, style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
@@ -254,7 +254,7 @@ class _AddItemState extends State<AddItem> {
                     ),
                   ),
                   onPressed: () {}, 
-                  child: const Text('Add Item', style: TextStyle(
+                  child: const Text('Add', style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'outfit',
                 ),
