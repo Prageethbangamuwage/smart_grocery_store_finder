@@ -84,29 +84,30 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               // sign in button
-             Container(
-                 decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(8),
-        ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(24),
+                ),
                 width: double.infinity, // Make the button span the entire width
                 height: 50.0, // Set the desired height of the button
-                margin: const EdgeInsets.symmetric(horizontal: 20.0), // Optional margin
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 20.0), // Optional margin
                 child: ElevatedButton(
-                               onPressed: () {
-  Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return const SearchShops(); // Replace with the screen you want to navigate to.
-  }));
-},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const SearchShops(); // Replace with the screen you want to navigate to.
+                    }));
+                  },
                   child: const Text(
                     "LOGIN",
                     style: TextStyle(
                       fontSize: 18.0,
+                    ),
                   ),
-
                 ),
-               ),
-               ),
+              ),
 
               const SizedBox(height: 30),
 

@@ -130,9 +130,10 @@ class Shops extends StatelessWidget {
                     ),
                     child: TextButton(
                       onPressed: () {
-                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return const keels(); // Replace with the screen you want to navigate to.
-  })); // Add functionality for the button here
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const keels(); // Replace with the screen you want to navigate to.
+                        })); // Add functionality for the button here
                       },
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
