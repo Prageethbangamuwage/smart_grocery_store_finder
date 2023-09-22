@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_grocery_store_finder/add_item_done.dart';
+import 'package:smart_grocery_store_finder/seller_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,21 +17,21 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AddItem(),
+      home: const UpdateItemDone(),
     );
   }
 }
 
-class AddItem extends StatefulWidget {
-  const AddItem({
+class UpdateItemDone extends StatefulWidget {
+  const UpdateItemDone({
     super.key,
   });
 
   @override
-  State<AddItem> createState() => _AddItemState();
+  State<UpdateItemDone> createState() => _UpdateItemDoneState();
 }
 
-class _AddItemState extends State<AddItem> {
+class _UpdateItemDoneState extends State<UpdateItemDone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _AddItemState extends State<AddItem> {
           width: 411,
           height: 823,
           decoration: const BoxDecoration(
-            color: Color.fromRGBO(255, 255, 255, 1),
+            color: Color.fromRGBO(249, 249, 249, 0.699999988079071),
           ),
           child: Stack(children: <Widget>[
             Positioned(top: 789, left: 19, child: Container()),
@@ -87,9 +87,9 @@ class _AddItemState extends State<AddItem> {
             ),
             const Positioned(
                 top: 98,
-                left: 160,
+                left: 125,
                 child: Text(
-                  'Add Item',
+                  'Update Item',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color.fromRGBO(0, 0, 0, 1),
@@ -244,14 +244,72 @@ class _AddItemState extends State<AddItem> {
                           ),
                         ),
                       ),
+                      onPressed: () {},
+                      child: const Text(
+                        'Update Item',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'outfit',
+                        ),
+                      ),
+                    )),
+              ),
+            ),
+            Positioned(
+                top: 355,
+                left: 59,
+                child: Container(
+                    width: 300,
+                    height: 150,
+                    decoration: const BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color.fromRGBO(0, 0, 0, 0.25),
+                            offset: Offset(0, 4),
+                            blurRadius: 25)
+                      ],
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                    ))),
+            const Positioned(
+                top: 380,
+                left: 75,
+                child: Text(
+                  'Item Updated Successfully!',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color.fromRGBO(6, 6, 6, 1),
+                      fontFamily: 'Outfit',
+                      fontSize: 20,
+                      letterSpacing:
+                          0 /*percentages not used in flutter. defaulting to zero*/,
+                      fontWeight: FontWeight.bold,
+                      height: 1),
+                )),
+            Positioned(
+              top: 440,
+              left: 200,
+              child: Center(
+                child: SizedBox(
+                    width: 150,
+                    height: 44,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                50.0), // Adjust the radius here
+                          ),
+                        ),
+                      ),
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return const AddItemDone(); // Replace with the screen you want to navigate to.
+                          return const SellerHome(); // Replace with the screen you want to navigate to.
                         }));
                       },
                       child: const Text(
-                        'Add Item',
+                        'OK',
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: 'outfit',
