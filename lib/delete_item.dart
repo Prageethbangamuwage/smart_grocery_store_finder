@@ -79,7 +79,7 @@ class DeleteItem extends StatelessWidget {
             ),
             // Search Bar below Text and White Color Button
             Positioned(
-              top: 180, 
+              top: 210, 
               left: 16,
               right: 16,
               child: Column(
@@ -106,32 +106,38 @@ class DeleteItem extends StatelessWidget {
                               border: InputBorder.none,
                             ),
                           ),
-                        ),
-                        
+                        ), 
                       ],
                     ),
                   ),
-                   Positioned(
-              top:200,
-              left:33, 
+                    
+            const SizedBox(height: 50,),
+            Positioned(
+              top: 450,
+              left: 33,
               child: Container(
                 width: 344,
                 height: 170,
-                 decoration: BoxDecoration(
-                  color: Colors.white, 
-                  borderRadius: BorderRadius.circular(10), 
-                    border: Border.all(
-                      color: Colors.white, 
-                      width: 0, 
+                decoration: const BoxDecoration(
+                  borderRadius : BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
                   ),
-                ),
-    
-              ),
+                boxShadow : [BoxShadow(
+                  color: Color.fromRGBO(0, 0, 0, 0.15000000596046448),
+                  offset: Offset(0,4),
+                  blurRadius: 25
+                )],
+                color : Color.fromRGBO(255, 255, 255, 1),
+                )
+              )
             ),
 
-              Padding(
+            Padding(
               padding: const EdgeInsets.only(
-                  top: 280.0
+                  top: 165.0
                   ), 
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -142,9 +148,7 @@ class DeleteItem extends StatelessWidget {
                     width: 344, 
                     height: 44, 
                     child: ElevatedButton(
-                      onPressed: () {
-                       
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
@@ -153,8 +157,8 @@ class DeleteItem extends StatelessWidget {
                         ),
                       ),
                       child: const Text('Delete', style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: 'outfit',),
+                        fontSize: 20,
+                        fontFamily: 'outfit',),
                       ),
                     ),
                   ),
@@ -162,12 +166,6 @@ class DeleteItem extends StatelessWidget {
               ),
             ),
            
-                  
-                    
-                         
-                      
-                         
-                  
                 ],
               ),
             ),
