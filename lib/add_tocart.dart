@@ -77,8 +77,8 @@ class _ItemDetailState extends State<ItemDetail> {
               children: [
                 Image.asset(
                   'images/biscutn.png',
-                  height: 200,
-                  width: 200,
+                  height: 179,
+                  width: 146,
                 ),
                 const SizedBox(
                   height: 20,

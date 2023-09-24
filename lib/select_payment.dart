@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_grocery_store_finder/add_payment.dart';
 import 'package:smart_grocery_store_finder/cashondelivery.dart';
 
 class SelectPayment extends StatelessWidget {
@@ -24,7 +25,12 @@ class SelectPayment extends StatelessWidget {
               ),
 
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return AddPayment(); // Replace with the screen you want to navigate to.
+                    }));
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -78,7 +84,7 @@ class SelectPayment extends StatelessWidget {
                       width: 32, // Adjust the width as needed
                       height: 32, // Adjust the height as needed
                     ),
-                    const Spacer(),// Add space between image and "10 km"
+                    const SizedBox(width: 8), // Add space between image and "10 km"
                     const Text(
                       'Cash on delivery',
                       style: TextStyle(
@@ -86,7 +92,7 @@ class SelectPayment extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    const SizedBox(width: 285), // Add space after "10 km"
+                    const SizedBox(width: 235), // Add space after "10 km"
                   ],
                 ),
               ),

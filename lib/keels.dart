@@ -37,8 +37,8 @@ class keels extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 50),
                     child: Image.asset(
                       'Location.png', // Path to your image
-                      width: 126, // Optional: Set the width of the image
-                      height: 123,
+                      width: 80, // Optional: Set the width of the image
+                      height: 80,
                     ),
                   ),
                 ),
@@ -66,11 +66,10 @@ class keels extends StatelessWidget {
                     // Photo
                     Image.asset(
                       'biscut.png',
-                      width: 126.81,
-                      height: 106.61,
+                      width: 85.81,
+                      height: 65.61,
                     ),
-                    const SizedBox(
-                        width: 20), // Add space between photo and text
+                    const Spacer(), // Add space between photo and text
                     // Text
                     const Column(
                       children: [
@@ -135,11 +134,10 @@ class keels extends StatelessWidget {
                     // Photo
                     Image.asset(
                       'nadu.png',
-                      width: 126.81,
-                      height: 106.61,
+                      width: 82.64,
+                      height: 74.5,
                     ),
-                    const SizedBox(
-                        width: 20), // Add space between photo and text
+                    const Spacer(), // Add space between photo and text
                     // Text
                     const Column(
                       children: [
@@ -198,11 +196,10 @@ class keels extends StatelessWidget {
                     // Photo
                     Image.asset(
                       'soap.png',
-                      width: 126.81,
-                      height: 106.61,
+                      width: 85.81,
+                      height: 65.61,
                     ),
-                    const SizedBox(
-                        width: 20), // Add space between photo and text
+                    const Spacer(), // Add space between photo and text
                     // Text
                     const Column(
                       children: [
@@ -261,11 +258,10 @@ class keels extends StatelessWidget {
                     // Photo
                     Image.asset(
                       'sunlight.png',
-                      width: 106.81,
-                      height: 86.61,
+                      width: 85.81,
+                      height: 65.61,
                     ),
-                    const SizedBox(
-                        width: 20), // Add space between photo and text
+                    const Spacer(), // Add space between photo and text
                     // Text
                     const Column(
                       children: [

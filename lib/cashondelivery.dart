@@ -48,7 +48,7 @@ class CashOnDelivery extends StatelessWidget {
                               width: 100, // Adjust the width as needed
                               height: 100, // Adjust the height as needed
                             ),
-                            const SizedBox(width: 20.0), // Add space between image and text
+                            const Spacer(), // Add space between image and text
                             const Expanded(
                               child:Center(
                               child: Text(
@@ -105,7 +105,7 @@ class CashOnDelivery extends StatelessWidget {
                         maxLines: 3, // Set the maximum number of lines to three
                         overflow: TextOverflow.ellipsis, // Handle overflow with ellipsis (...) if necessary
                       ),
-                      SizedBox(width: 300.0), // Add space between text and values
+                      Spacer(), // Add space between text and values
                       Text(
                         '840.00\n350.00\n1170.00',
                         style: TextStyle(
