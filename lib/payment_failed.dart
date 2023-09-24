@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SelectOption extends StatelessWidget {
-  const SelectOption({Key? key}) : super(key: key);
+class PaymentFailed extends StatelessWidget {
+  const PaymentFailed({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
