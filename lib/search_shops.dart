@@ -85,6 +85,7 @@ class SearchShops extends StatelessWidget {
                         ),
                       ),
                       child: const Text('Search Shops'),
+                      
                     ),
                   ),
                 ],

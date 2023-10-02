@@ -76,7 +76,7 @@ class _ItemDetailState extends State<ItemDetail> {
             child: Column(
               children: [
                 Image.asset(
-                  'biscut.png',
+                  'assets/biscut.png',
                   height: 200,
                   width: 200,
                 ),

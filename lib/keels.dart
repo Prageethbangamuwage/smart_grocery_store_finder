@@ -36,7 +36,7 @@ class keels extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 50),
                     child: Image.asset(
-                      'Location.png', // Path to your image
+                      'assets/Location.png', // Path to your image
                       width: 80, // Optional: Set the width of the image
                       height: 80,
                     ),
@@ -65,7 +65,7 @@ class keels extends StatelessWidget {
                   children: [
                     // Photo
                     Image.asset(
-                      'biscut.png',
+                      'assets/biscut.png',
                       width: 85.81,
                       height: 65.61,
                     ),
@@ -133,7 +133,7 @@ class keels extends StatelessWidget {
                   children: [
                     // Photo
                     Image.asset(
-                      'nadu.png',
+                      'assets/nadu.png',
                       width: 82.64,
                       height: 74.5,
                     ),
@@ -195,7 +195,7 @@ class keels extends StatelessWidget {
                   children: [
                     // Photo
                     Image.asset(
-                      'soap.png',
+                      'assets/soap.png',
                       width: 85.81,
                       height: 65.61,
                     ),
@@ -257,7 +257,7 @@ class keels extends StatelessWidget {
                   children: [
                     // Photo
                     Image.asset(
-                      'sunlight.png',
+                      'assets/sunlight.png',
                       width: 85.81,
                       height: 65.61,
                     ),
