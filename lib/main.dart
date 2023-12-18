@@ -1,11 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_grocery_store_finder/fogot_screen.dart';
 import 'package:smart_grocery_store_finder/home_screen.dart';
 import 'package:smart_grocery_store_finder/intro_screen.dart';
 import 'package:smart_grocery_store_finder/splashscreen.dart';
 
-
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MyApp());
 }
 

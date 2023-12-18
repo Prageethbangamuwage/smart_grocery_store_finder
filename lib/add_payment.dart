@@ -12,7 +12,8 @@ class AddPayment extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Align(
-          alignment: Alignment.topLeft, // Align everything to the top left corner
+          alignment:
+              Alignment.topLeft, // Align everything to the top left corner
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,7 +39,7 @@ class AddPayment extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Image.asset(
-                      'creditcard2.png',
+                      'assets/creditcard2.png',
                       width: 170,
                       height: 50,
                     ),
@@ -51,7 +52,8 @@ class AddPayment extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start, // Align content to the left
+                    crossAxisAlignment:
+                        CrossAxisAlignment.start, // Align content to the left
                     children: [
                       MyTextField(
                         controller: usernameController,

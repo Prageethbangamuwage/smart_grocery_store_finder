@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "729383660073",
+    "project_id": "smart-grocery-store-find-5430b",
+    "storage_bucket": "smart-grocery-store-find-5430b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729383660073:android:a7b82ae799be66fec84a38",
+        "android_client_info": {
+          "package_name": "com.example.smart_grocery_store_finder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5VLESf7DGtAqeUZiRz6UXeYwqEZ1JnvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
